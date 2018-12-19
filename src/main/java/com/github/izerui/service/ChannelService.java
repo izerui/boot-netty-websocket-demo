@@ -39,7 +39,7 @@ public class ChannelService {
     private ChannelIdRedisTemplate redisTemplate;
 
     /**
-     * 发送消息给前端
+     * 发送websocet消息给前端
      */
     public void sendMessage(WebsocketMsg msg) {
         // 如果msg中userId 为null表示群发给当前所有前端连接
@@ -52,7 +52,7 @@ public class ChannelService {
 
 
     /**
-     * 接收前端发送过来的消息
+     * 接收前端发送过来的websocet消息
      */
     public void readMessage(Channel channel, String body) throws Exception {
         Gson gson = new Gson();
